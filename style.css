@@ -115,25 +115,24 @@ span{
     line-height: 1.2;
 }
 .home-img{
-    flex: 1;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
-.home-img img{
-    position: relative;
-    top: 0;
-    width: 32vw;
+.home-img img {
+    width: 100%;
+    max-width:300px; 
+    height: auto; 
     border-radius: 50%;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+    object-fit: cover;
     box-shadow: 0 0 15px var(--main-color);
     border: 10px solid var(--main-color);
     animation: floatUpDown 1.5s ease-in-out infinite;
 }
 .home-img img:hover {
-    box-shadow: 0 0 50px var(--main-color), 
-                0 0 50px var(--main-color), 
-                0 0 50px var(--main-color);
+    box-shadow: 0 0 20px var(--main-color), 
+                0 0 20px var(--main-color), 
+                0 0 20px var(--main-color);
 }
 
 @keyframes floatUpDown {
@@ -675,13 +674,12 @@ span{
 .certifications-carousel {
     position: relative;
     width: 100%;
-    max-width: 700px; /* adjust as needed */
+    max-width: 700px; 
     height: 45rem;
     border-radius: 1rem;
     overflow: hidden;
 }
 
-/* Position buttons at left and right center of the carousel */
 .certifications-carousel .navigation {
     position: absolute;
     top: 50%;
@@ -692,7 +690,7 @@ span{
     align-items: center;
     padding: 0 1rem;
     transform: translateY(-50%);
-    pointer-events: none; /* allow only buttons to be clickable */
+    pointer-events: none; 
 }
 
 .certifications-carousel .navigation button {
@@ -1082,3 +1080,17 @@ span{
   }
 }
 
+@media (max-width: 768px) {
+    .resume-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .resume-box .heading {
+        text-align: center;
+    }
+
+    .resume-box p.desc {
+        text-align: center;
+    }
+}
