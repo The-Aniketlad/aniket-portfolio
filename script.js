@@ -52,11 +52,10 @@ navLinks.forEach(link => {
 
   resumeBtns.forEach((btn, index) => {
     btn.addEventListener('click', () => {
-      // Remove 'active' class from all buttons and details
+     
       resumeBtns.forEach(b => b.classList.remove('active'));
       resumeDetails.forEach(detail => detail.classList.remove('active'));
 
-      // Add 'active' class to the clicked button and matching detail
       btn.classList.add('active');
       resumeDetails[index].classList.add('active');
     });
@@ -82,12 +81,12 @@ const activeCertification = () => {
 }
 
 arrowRight.addEventListener('click', () => {
-    index = (index + 1) % 2; // go to next image, loop after last
+    index = (index + 1) % 2; 
     activeCertification();
 });
 
 arrowLeft.addEventListener('click', () => {
-    index = (index - 1 + 2) % 2; // go to previous image, loop to end
+    index = (index - 1 + 2) % 2; 
     activeCertification();
 });
 
