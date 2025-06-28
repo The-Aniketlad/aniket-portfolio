@@ -540,6 +540,99 @@ span{
     font-size: 1.8rem;
 }
 
+.projects {
+    background-color: var(--second-bg-color);
+}
+
+.projects_container.grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15rem 0;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem;
+}
+
+.projects_card {
+  position: relative;
+  width: 340px;
+  height: 260px;
+  background-color: var(--second-bg-color);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projects_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+}
+
+.projects_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.projects_card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: var(--second-bg-color);
+  transition: transform 0.3s ease-in-out;
+}
+
+.projects_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(69, 124, 69, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+  padding: 2rem;
+}
+
+.projects_card:hover .projects_overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projects_subtitle,
+.projects_button {
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 1.5rem;  
+  color: #fff;
+  margin: 1rem 0;
+  z-index: 2;
+}
+
+.projects .section_title {
+    color: var(--main-color);
+}
+
+
+.projects .section_title,
+.projects .section_subtitle {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
 .certification-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
