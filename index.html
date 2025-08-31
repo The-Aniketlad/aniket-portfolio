@@ -378,6 +378,27 @@
             subjectCount.textContent = `Words: ${words.length} / 90`;
         });
     </script>
+
+	<script>
+        let timeout;
+        const header = document.querySelector('.header');
+
+        function showNavbar() {
+            header.classList.remove('hidden');
+         clearTimeout(timeout);
+            timeout = setTimeout(() => {
+                header.classList.add('hidden');
+            }, 3000); 
+        }
+
+        document.addEventListener('mousemove', showNavbar);
+        document.addEventListener('keydown', showNavbar);
+
+        document.addEventListener('touchstart', showNavbar);
+
+        showNavbar();
+    </script>
 </body>
 </html>
+
 
