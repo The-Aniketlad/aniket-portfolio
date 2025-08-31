@@ -38,7 +38,13 @@ body{
     backdrop-filter: blur(10px);
     align-items: center;
     z-index: 1000;
+	transition: top 0.5s ease-in-out;
 }
+
+.header.hidden {
+	top: -100px;
+
+	
 .logo{
     font-size: 2.5rem;
     color: var(--main-color);
@@ -1187,3 +1193,4 @@ span{
         text-align: center;
     }
 }
+
