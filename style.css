@@ -1023,8 +1023,9 @@ span{
   .home {
     flex-direction: column;
     align-items: center;
+	justify-content: center;
     text-align: left;
-    padding: 6rem 3% 2rem ;
+    padding: 2rem 1.5rem ;
   }
 
   .home-img {
@@ -1032,14 +1033,32 @@ span{
     margin-bottom: 2rem;
   }
 
+  .home-content {
+	  text-align: center;
+	  max-width: 95%;
+  }
+
   .home-content h1, .home-content h3 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
   .home-content p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     max-width: 95%;
-    margin: 0 auto;
+    margin: 1.5rem auto;
+  }
+
+  .btn-group {
+	  flex-direction: column;
+	  align-items: center;
+	  gap: 1rem;
+  }
+
+  .social-icons {
+	  justify-content: center;
+	  flex-wrap: wrap;
+	  gap: 1rem;
+
   }
 }
 @media (max-width: 768px) {
@@ -1080,21 +1099,70 @@ span{
   .services-info p {
     font-size: 1.6rem;
   }
+
+  .certification-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+
+  .certification-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .certification-box h3,
+  .certification-box p,
+  .certification-box .tech {
+    text-align: center;
+  }
+
+  .certification-box img,
+  .certifications-carousel {
+    max-width: 90%;
+    margin: 1.5rem auto;
+  }
+
+  .certification-box .navigation {
+    justify-content: center;
+    margin-top: 1rem;
+  }
 }
 @media (max-width: 768px) {
-  .contact form .input-box {
-    flex-direction: column;
+  .contact {
+        text-align: center;
+    }
+
+    .contact h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .contact form .input-box {
+    align-items: center;
     width: 100%;
   }
 
   .contact form {
-    gap: 1rem;
-    padding: 0 2rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+    width: 100%;
   }
 
   .contact form input,
   .contact form textarea {
-    font-size: 1.6rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+
+  .contact form .btn {
+    margin: 1.5rem auto 0;
+    display: block;
   }
 }
 @media (max-width: 480px) {
@@ -1129,4 +1197,5 @@ span{
         text-align: center;
     }
 }
+
 
