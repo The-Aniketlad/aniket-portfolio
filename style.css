@@ -1,90 +1,134 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: "Trebuchet MS", sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: "Trebuchet MS", sans-serif;
 }
-:root {
-    --bg-color: #080808;
-    --second-bg-color: #121212;
-    --third-bg-color:#3b3b3b;
-    --text-color: white;
-    --main-color: #1DB954;
-    --white-color: #fff;
-}   
 
-html{
-    font-size: 60%;
-    overflow-x: hidden;
+:root {
+  --bg-color: #080808;
+  --second-bg-color: #121212;
+  --third-bg-color: #3b3b3b;
+  --text-color: white;
+  --main-color: #1DB954;
+  --white-color: #fff;
 }
-body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
+
+html {
+  font-size: 60%;
+  overflow-x: hidden;
 }
-.header{
-    position: fixed;
-    top: 0;
-    left: 0%;
-    width: 100%;
-    padding: 2rem 5%;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    backdrop-filter: blur(10px);
-    align-items: center;
-    z-index: 1000;
-    transition: top 0.5s ease-in-out;
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0%;
+  width: 100%;
+  padding: 2rem 5%;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 1000;
+  transition: top 0.5s ease-in-out;
 }
 
 .header.hidden {
-    top: -100px;
+  top: -100px;
 }
 
-.logo{
-    font-size: 2.5rem;
-    color: var(--main-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
-    text-decoration: none;
-    text-shadow: 0 0 25px var(--main-color);
-    margin-left: 0;
+.logo {
+  font-size: 2.5rem;
+  color: var(--main-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-decoration: none;
+  text-shadow: 0 0 25px var(--main-color);
+  margin-left: 0;
 }
-.logo:hover{
-    transform: scale(1.1);
+
+.logo:hover {
+  transform: scale(1.1);
 }
-.logo span{
-    text-shadow: none;
+
+.logo span {
+  color: var(--text-color);
+  text-shadow: none;
 }
-.navbar{
-    display: flex;
-    gap: 3rem;
-    align-items: center;
-    font-size: 1.5rem;
+
+.floating-dock {
+  position: fixed;
+  top: 2rem;          
+  right: 2rem;        
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 3rem;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  flex-direction: row;   
+  gap: 1.5rem;
+  box-shadow: 0 0 15px rgba(0,255,81,0.4);
+  z-index: 2000;
+  pointer-events: auto;
 }
-.navbar a{
-    font-size: 1.2vw;
-    color: var(--text-color);
-    margin: 0;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
-    white-space: nowrap;
+
+.floating-dock a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--main-color);
+  transition: all 0.3s ease;
 }
-.navbar a:hover,
-.navbar a.active{
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+
+.floating-dock a:hover {
+  transform: scale(1.2);
+  color: white;
 }
-#menu-icon{
-    font-size: 3.6rem;
-    color: var(--main-color);
-    display: none;
+
+@media (max-width: 768px) {
+    .floating-dock {
+        top: 1rem;       
+        right: 1rem;     
+        left: auto;
+        transform: none;
+        padding: 1rem 1.8rem;   
+        gap: 1.5rem;            
+    }
+
+    .floating-dock a {
+        font-size: 2rem;         
+        width: 3rem;            
+        height: 3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .floating-dock {
+        top: 0.8rem;
+        right: 0.8rem;          
+        left: auto;
+        padding: 0.8rem 1.5rem;  
+        gap: 1.2rem;
+    }
+
+    .floating-dock a {
+        font-size: 1.8rem;       
+        width: 2.8rem;
+        height: 2.8rem;
+    }
 }
 
 section{
@@ -1197,5 +1241,6 @@ span{
         text-align: center;
     }
 }
+
 
 
