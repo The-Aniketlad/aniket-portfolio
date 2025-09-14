@@ -12,7 +12,7 @@
 :root {
   --bg-color: #080808;
   --second-bg-color: #121212;
-  --third-bg-color: #3b3b3b;
+  --third-bg-color: rgba(255, 255, 255, 0.2);
   --text-color: white;
   --main-color: #1DB954;
   --white-color: #fff;
@@ -27,7 +27,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
 }
-
 
 .header {
   position: fixed;
@@ -70,14 +69,14 @@ body {
 
 .floating-dock {
   position: fixed;
-  top: 2rem;          
+  top: 2rem;         
   right: 2rem;        
   background: rgba(0,0,0,0.7);
   backdrop-filter: blur(10px);
   border-radius: 3rem;
   padding: 0.8rem 1.5rem;
   display: flex;
-  flex-direction: row;   
+  flex-direction: row;  
   gap: 1.5rem;
   box-shadow: 0 0 15px rgba(0,255,81,0.4);
   z-index: 2000;
@@ -105,12 +104,12 @@ body {
         left: auto;
         transform: none;
         padding: 1rem 1.8rem;   
-        gap: 1.5rem;            
+        gap: 1.5rem;           
     }
 
     .floating-dock a {
-        font-size: 2rem;         
-        width: 3rem;            
+        font-size: 2rem;        
+        width: 3rem;             
         height: 3rem;
     }
 }
@@ -118,7 +117,7 @@ body {
 @media (max-width: 480px) {
     .floating-dock {
         top: 0.8rem;
-        right: 0.8rem;          
+        right: 0.8rem;         
         left: auto;
         padding: 0.8rem 1.5rem;  
         gap: 1.2rem;
@@ -131,9 +130,12 @@ body {
     }
 }
 
+
+
 section{
     min-height: 100vh;
     padding: 10rem 12% 10rem;
+    padding-right: 5%;
 }
 .home{
     display: flex;
@@ -243,6 +245,7 @@ span{
   text-decoration: none;
   box-shadow: 0 0 30px #3CA55C;
 }
+
 
 .heading{
     font-size: 8rem;
@@ -430,6 +433,12 @@ span{
     font-size: 1.5rem;
 }
 
+.resume-box, .certification-box {
+  position: relative;
+  z-index: 2100; 
+}
+
+
 .resume-box .desc {
     margin: 2rem 0 2.5rem;
 }
@@ -468,6 +477,8 @@ span{
 .resume-detail.active {
   display: block;
 }
+
+
 .resume-box .heading {
     font-size: 4.5rem;
     text-align: left;
@@ -865,6 +876,7 @@ span{
     cursor: pointer;
 }
 
+
 .contact{
     background-color: var(--bg-color);
 }
@@ -976,6 +988,69 @@ span{
     color: white;
 }
 
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; 
+    z-index: 1000;
+}
+
+.button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(176, 160, 255, 0.253);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.button:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: rgba(31, 213, 15, 0.601);
+    align-items: center;
+}
+
+.button:hover .svgIcon {
+    transition-duration: 0.3s;
+    transform: translateY(-200%);
+}
+
+.button::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: white;
+    font-size: 0px;
+}
+
+.button:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    transition-duration: 0.3s;
+}
+
+
 @media(max-width:1285px){
     html{
         font-size: 55%;
@@ -1084,8 +1159,9 @@ span{
   .home {
     flex-direction: column;
     align-items: center;
-	justify-content: center;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    margin-top: 6rem;
     padding: 2rem 1.5rem ;
   }
 
@@ -1095,8 +1171,8 @@ span{
   }
 
   .home-content {
-	  text-align: center;
-	  max-width: 95%;
+    text-align: center;
+    max-width: 95%;
   }
 
   .home-content h1, .home-content h3 {
@@ -1110,16 +1186,15 @@ span{
   }
 
   .btn-group {
-	  flex-direction: column;
-	  align-items: center;
-	  gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .social-icons {
-	  justify-content: center;
-	  flex-wrap: wrap;
-	  gap: 1rem;
-
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -1191,7 +1266,8 @@ span{
   }
 }
 @media (max-width: 768px) {
-  .contact {
+  
+    .contact {
         text-align: center;
     }
 
@@ -1258,9 +1334,3 @@ span{
         text-align: center;
     }
 }
-
-
-
-
-
-
