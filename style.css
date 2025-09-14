@@ -897,9 +897,27 @@ span{
     margin: 1.5rem 0;
     resize: none;
 }
-.contact form .btn{
-    margin-top: 2rem;
+.contact form .btn {
+  background-image: linear-gradient(to right, #3CA55C 0%, #B5AC49 51%, #3CA55C 100%);
+  background-size: 200% auto;
+  border: none;
+  color: white;
+  padding: 15px 45px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  box-shadow: 0 0 20px #eee;
+  display: inline-block;
 }
+
+.contact form .btn:hover {
+  background-position: right center;
+  box-shadow: 0 0 30px #3CA55C;
+}
+
 .footer{
     position: relative;
     bottom: 0;
@@ -1240,6 +1258,7 @@ span{
         text-align: center;
     }
 }
+
 
 
 
