@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="./style.css?v=1.0" />
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet" />
     </head>
-    <!-- Floating Dock Navbar -->
+    
     <div class="floating-dock">
         <a href="#home" title="Home"><i class='bx bx-home'></i></a>
         <a href="#services" title="Services"><i class='bx bx-code-alt'></i></a>
@@ -200,36 +200,66 @@
                 </div>
         </section>
 	    
-<!----Projects---->
-	<section class="projects section" id="projects">
+            <!----Projects---->
+                <section class="projects section" id="projects">
             <h3 class="section_subtitle">My Projects</h3>
             <h2 class="section_title">Recent Projects</h2>
 
-            <div class="projects_container container grid">
-                <article class="projects_card">
-                    <img src="Project-1.jpeg" alt="project image" class="projects_img">
-
-                    <div class="projects_overlay">
-                    <div class="projects_overlay">
-
-                        <span class="projects_subtitle">Web</span>
-                        
-                        <h2 class="projects_title">UI/UX Project (Kuro Neko)</h2>
-                            <a href="https://www.figma.com/design/uzEJJOF1QzckAtWxq9Sblc/Kuro-neko--Anime-Streaming-app-?m=auto&t=5ZG9zClxdmN2mgvu-6" class="projects_button">View demo <i class='bx bx-link-external'></i></a>
-                     </div>
-                </article>
-
-    
-                <article class="projects_card">
-                    <img src="Project-2.jpeg" alt="project image" class="projects_img">
-                        <div class="projects_overlay">
-                            <span class="projects_subtitle">Web</span>
-                            <h2 class="projects_title">Responsive Admin Dashboard</h2>
-                            <a href="https://dashboardaniket.netlify.app/" class="projects_button">View demo <i class='bx bx-link-external'></i></a>
-                        </div>
-                </article>
+            <!-- Tabs -->
+            <div class="projects_tabs">
+                <button class="tab active" data-filter="all">Tab 1</button>
+                <button class="tab" data-filter="web">Tab 2</button>
+                <button class="tab" data-filter="uiux">Tab 3</button>
             </div>
-        </section>
+
+            <!-- Project Cards -->
+            <div class="projects_grid">
+                <article class="project_card">
+                    <img src="Project-1.jpeg" alt="Project">
+
+                    <div class="project_overlay">
+                        <h3>UI-UX project</h3>
+                        <p>A Figma design prototype for an anime streaming application named "Kuro Neko" (Black Cat).</p>
+                        <a href="https://www.figma.com/design/uzEJJOF1QzckAtWxq9Sblc/Kuro-neko--Anime-Streaming-app-?m=auto&t=SjNiK5Cpza0tAd5t-6" class="project_btn">View Design</a>
+                    </div>
+                </article>
+
+
+
+                <article class="project_card">
+                    <img src="Project-2.jpeg" alt="Project">
+
+                    <div class="project_overlay">
+                        <h3>Responsive Admin Dashboard</h3>
+                        <p>DashForge is a responsive admin dashboard built with HTML, CSS, and JavaScript that visualizes sales data, manages orders, and tracks recent updates and customer activity.</p>
+                        <a href="https://dashboardaniket.netlify.app/" class="project_btn">Live Demo</a>
+                    </div>
+                </article>
+
+
+                <article class="project_card">
+                    <img src="Workout.jpeg" alt="Project">
+
+                    <div class="project_overlay">
+                        <h3>AI Workout Generator - By Vercel</h3>
+                        <p>FitGen is an AI-powered fitness coach that generates personalized workout plans based on your specific goals, available time, equipment, and fitness level.</p>
+                        <a href="https://ai-workoutgenerator.vercel.app/" class="project_btn">Live Demo</a>
+                    </div>
+                </article>
+
+                <article class="project_card">
+                    <img src="parser.jpeg" alt="Project">
+
+                    <div class="project_overlay">
+                        <h3>Resume Parser</h3>
+                        <p>This project is an **AI-powered resume parser** that allows users to upload their CVs and instantly extract details using drag-and-drop functionality.</p>
+                        <a href="https://github.com/The-Aniketlad/resume-parser" class="project_btn">Github Repo</a>
+                    </div>
+                </article>
+
+            </div>
+            </section>
+
 
         <!--certifications-->
         <section class="certification active" id="certification">
@@ -398,6 +428,54 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
+
+<script>
+  const tabs = document.querySelectorAll(".tab");
+  const cards = Array.from(document.querySelectorAll(".project_card"));
+  const CARDS_PER_TAB = 6;
+  let currentTab = 0;
+
+  function showTab(tabIndex) {
+    const direction = tabIndex > currentTab ? "right" : "left";
+
+    cards.forEach((card, index) => {
+      const start = tabIndex * CARDS_PER_TAB;
+      const end = start + CARDS_PER_TAB;
+
+      card.classList.remove("slide-in-left", "slide-in-right");
+
+      if (index >= start && index < end) {
+        card.style.display = "block";
+
+        
+        void card.offsetWidth;
+
+        card.classList.add(
+          direction === "right" ? "slide-in-right" : "slide-in-left"
+        );
+      } else {
+        card.style.display = "none";
+      }
+    });
+
+    currentTab = tabIndex;
+  }
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => {
+      if (index === currentTab) return;
+
+      tabs.forEach(t => t.classList.remove("active"));
+      tab.classList.add("active");
+
+      showTab(index);
+    });
+  });
+
+  
+  showTab(0);
+</script>
+
 
 
 
