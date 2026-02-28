@@ -1,486 +1,879 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-        <title>Reponsive Portfolio Website</title>
-        <link rel="stylesheet" href="./style.css?v=1.0" />
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet" />
-    </head>
-    
-    <div class="floating-dock">
-        <a href="#home" title="Home"><i class='bx bx-home'></i></a>
-        <a href="#services" title="Services"><i class='bx bx-code-alt'></i></a>
-        <a href="#resume" title="Resume"><i class='bx bx-file'></i></a>
-        <a href="#projects" title="Projects"><i class='bx bx-layout'></i></a>
-        <a href="#certification" title="Certifications"><i class='bx bx-award'></i></a>
-        <a href="#contact" title="Contact"><i class='bx bx-envelope'></i></a>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reponsive Portfolio Website</title>
+    <link rel="stylesheet" href="./style.css?v=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <header class="header">
-            <a href="#home" class="logo">A <span>L</span></a>
-        </header>
+  <nav class="pill-navbar">
+    <a href="#home" class="pill-nav-item active">
+      <i class="bx bx-home"></i>
+      <span>Home</span>
+    </a>
+    <a href="#services" class="pill-nav-item">
+      <i class="bx bx-code-alt"></i>
+      <span>Services</span>
+    </a>
+    <a href="#resume" class="pill-nav-item">
+      <i class="bx bx-file"></i>
+      <span>Resume</span>
+    </a>
+    <a href="#projects" class="pill-nav-item">
+      <i class="bx bx-layout"></i>
+      <span>Projects</span>
+    </a>
+    <a href="#certification" class="pill-nav-item">
+      <i class="bx bx-award"></i>
+      <span>Certifications</span>
+    </a>
+    <a href="#contact" class="pill-nav-item">
+      <i class="bx bx-envelope"></i>
+      <span>Contact</span>
+    </a>
+  </nav>
 
+  <body>
+    <header class="header">
+      <a href="#home" class="logo">A <span>L</span></a>
+    </header>
 
+    <section class="home" id="home">
+      <div class="home-content">
+        <h1>Hi, It's me <span>Aniket</span></h1>
 
-        <section class="home" id="home">
-            <div class="home-content">
-                <h1>Hi, It's me <span>Aniket</span></h1>
-                <h3 class="text-animation">I'm a Fresher <span>
-                </span></h3>
-                <p>A highly motivated and detail-oriented who is currently pursuing Master's in Computer Applications (MCA) student with a solid foundation in programming, software development, and IT solutions. Passionate about learning new technologies and eager to contribute to real-world projects. Skilled in languages such as Java, Python, with experience in database management, web development, and problem-solving. Adept at teamwork, quick to adapt to new tools and technologies, and excited to start a career where I can apply my academic knowledge and passion for technology to make a meaningful impact.</p>
+        <p>
+          A highly motivated and detail-oriented who is currently pursuing
+          Master's in Computer Applications (MCA) student with a solid
+          foundation in programming, software development, and IT solutions.
+          Passionate about learning new technologies and eager to contribute to
+          real-world projects. Skilled in languages such as Java, Python, with
+          experience in database management, web development, and
+          problem-solving. Adept at teamwork, quick to adapt to new tools and
+          technologies, and excited to start a career where I can apply my
+          academic knowledge and passion for technology to make a meaningful
+          impact.
+        </p>
 
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/aniket-lad28a/"><i class='bx bxl-linkedin-square' style='color: #00ff51;'></i></a>
-                    <a href="https://github.com/The-Aniketlad"><i class='bx bxl-github' style='color:#00ff51' ></i></a>
-                    <a href="https://www.instagram.com/aniket__lad_/"><i class='bx bxl-instagram-alt' style='color:#00ff51' ></i></a>
-                </div>
+        <div class="card">
+          <a
+            class="socialContainer containerOne"
+            href="https://www.instagram.com/aniket__lad_/"
+          >
+            <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+              <path
+                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="socialContainer containerTwo"
+            href="https://www.linkedin.com/in/aniket-lad28a/"
+          >
+            <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
+              <path
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+              ></path>
+            </svg>
+          </a>
+          <a
+            class="socialContainer containerThree"
+            href="https://github.com/The-Aniketlad"
+          >
+            <svg viewBox="0 0 16 16" class="socialSvg githubSvg">
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+              ></path>
+            </svg>
+          </a>
+        </div>
 
-                <div class="btn-group">
-                    <a href="Aniketlad_CV.pdf" download class="btn-grad">Download CV</a>
-                    <a href="#contact"
-                    class="btn-grad">Contact</a>
-                </div>
+        <div class="btn-group">
+          <a href="Aniketlad_CV.pdf" download class="download-button">
+            <div class="docs">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+                <polyline points="10 9 9 9 8 9"></polyline>
+              </svg>
+              Download CV
             </div>
-                <div class="home-img">
-                    <img src="Me.png" alt="">
-                </div>
-        </section>
-
-
-        <section class="services active" id="services">
-            <h2 class="heading">My  <span>Services</span></h2>
-	        <div class="services-container">
-		        <div class="services-box">
-			        <div class="icon">
-				        <i class='bx bx-code-alt'></i>  
-				        <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
-			        </div>
-			        <h3>Web Development</h3>
-			        <p>I have worked on various web development languages during my MCA, including HTML, CSS, JavaScript, and PHP. I have developed multiple academic projects involving both frontend and backend development.
-		    </div>
-
-			<div class="services-box">
-			    <div class="icon">
-				    <i class='bx bx-paint-roll'></i> 
-				    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
-			    </div>
-			    <h3>UI/UX Design</h3>
-			    <p>As part of my web development projects, I focused on creating user-friendly interfaces. I learned the basics of UI/UX design, including layout design, user flow, and responsive design using tools like Figma and Bootstrap.
-			</div>
-
-			<div class="services-box">
-			    <div class="icon">
-				    <i class='bx bx-slideshow'></i> 
-				    <a href="#"><i class='bx bx-right-arrow-alt'></i></a>
-			    </div>
-			    <h3>Programming</h3>
-			    <p>I have strong programming skills in languages like Java and Python, developed through academic assignments and coding practice. I enjoy solving logical problems and building console-based applications.
-			    </div>
-	        </div>
-        </section>
-
-        <!--qualifications-->
-        <section class="resume active" id="resume">
-            <div class="resume-container">
-                <div class="resume-box">
-                    <h2>Why Hire Me?</h2>
-                    <p class="desc">Passionate MCA student with a solid foundation in web development and programming. Skilled in HTML, CSS, JavaScript, Java, and MySQL through academic projects. A quick learner with strong problem-solving skills and a drive to deliver quality results. Eager to take on real-world challenges and grow with a dynamic team.</p>
-                    <button class="resume-btn active">Experience</button>
-                    <button class="resume-btn">Education</button>
-                    <button class="resume-btn">Skills</button>
-                    <button class="resume-btn">About Me</button>
-                </div>
-
-                <div class="resume-box">
-                    <div class="resume-detail experience">
-                        <h2 class="heading">My <span>Experience</span></h2>
-                        <p class="desc">Experience:</p>
-                        <div class="resume-list">
-                            <div class="resume-item">
-                                <p class="year">Present</p>
-                                <h3>Fresher</h3>
-                                <p>I am a motivated and enthusiastic individual, with a strong interest in web development and programming. Through my academic projects, I have gained hands-on experience with technologies like HTML, CSS, JavaScript, Java, and MySQL. As a quick learner with a positive attitude, I’m eager to apply my skills in a professional environment, contribute to meaningful projects, and grow as a software professional.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                            <div class="resume-detail education">
-                                <h2 class="heading">My <span>Education</span></h2>
-                                <p class="desc">My Academic Qualifications Include:</p>
-                                <div class="resume-list">
-                                    <div class="resume-item">
-                                        <p class="year">2020 - 2022</p>
-                                        <h3>Bachelor's in Computer Science</h3>
-                                        <p class="university">University of Mumbai</p>
-                                        <p>Location: Airoli, Navi Mumbai</p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p class="year">2024 - Present</p>
-                                        <h3>Master's in Computer Applications</h3>
-                                        <p class="university">University of Mumbai</p>
-                                        <p>Location: Nerul, Navi Mumbai</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="resume-detail skills">
-                                <h2 class="heading">My <span>Skills</span></h2>
-                                <p class="desc">I have acquired the following technical skills:</p>
-                                <div class="resume-list">
-                                    <div class="resume-item">
-                                        <i class='bx bxl-html5'></i>
-                                        <span>HTML5</span> 
-                                    </div>
-                                    <div class="resume-item">
-                                        <i class='bx bxl-css3'></i> 
-                                        <span>CSS3</span> 
-                                    </div>
-                                    <div class="resume-item">
-                                        <i class='bx bxl-javascript'></i> 
-                                        <span>JavaScript</span> 
-                                    </div>
-                                    <div class="resume-item">
-                                        <i class='bx bxl-python'></i> 
-                                        <span>Python</span> 
-                                    </div>
-                                    <div class="resume-item">
-                                        <i class='bx bxl-figma'></i> 
-                                        <span>Figma</span> 
-                                    </div>
-                                    <div class="resume-item">
-                                        <i class='bx bxl-nodejs'></i> 
-                                        <span>Node.js</span> 
-                                    </div>
-                                    <div class="resume-item">
-                                        <i class='bx bxl-tailwind-css'></i> 
-                                        <span>Tailwind CSS</span> 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="resume-detail about me">
-                                <h2 class="heading">About <span>Me</span></h2>
-                                <p class="desc">I am an MCA student with a strong interest in web development and programming, eager to apply my skills and grow in the tech industry.</p>
-                                <div class="resume-list">
-                                    <div class="resume-item">
-                                        <p>Name: <span>Aniket Lad</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Gender: <span>Male</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Age: <span>24 Years Old</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Status: <span>Unmarried</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>City: <span>Navi Mumbai</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Nationality: <span>Indian</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Experience: <span>Fresher</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Full Time: <span>Available</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Email: <span>aniketlad28@gmail.com</span></p>
-                                    </div>
-                                    <div class="resume-item">
-                                        <p>Languages: <span>English, Marathi, Hindi.</span></p>
-                                    </div>
-                                </div>
-                            </div>
-                </div>
-        </section>
-	    
-            <!----Projects---->
-                <section class="projects section" id="projects">
-            <h3 class="section_subtitle">My Projects</h3>
-            <h2 class="section_title">Recent Projects</h2>
-
-            <!-- Tabs -->
-            <div class="projects_tabs">
-                <button class="tab active" data-filter="all">Tab 1</button>
-                <button class="tab" data-filter="web">Tab 2</button>
-                <button class="tab" data-filter="uiux">Tab 3</button>
+            <div class="download">
+              <svg
+                viewBox="0 0 24 24"
+                width="24"
+                height="24"
+                stroke="currentColor"
+                stroke-width="2"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
             </div>
+          </a>
+          <a href="#contact" class="contact-btn">
+            <span>Contact</span>
+          </a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="Me.png" alt="" />
+      </div>
+    </section>
 
-            <!-- Project Cards -->
-            <div class="projects_grid">
-                <article class="project_card">
-                    <img src="Project-1.png" alt="Project">
-
-                    <div class="project_overlay">
-                        <h3>UI-UX project</h3>
-                        <p>A Figma design prototype for an anime streaming application named "Kuro Neko" (Black Cat).</p>
-                        <a href="https://www.figma.com/design/JbtyUcnHlxfdv0ibkpNFhJ/Kuro-Neko-App?m=auto&t=rhhTGsh4FKZ87wbO-1">View Design</a>
-                    </div>
-                </article>
-
-
-
-                <article class="project_card">
-                    <img src="Project-2.jpeg" alt="Project">
-
-                    <div class="project_overlay">
-                        <h3>Responsive Admin Dashboard</h3>
-                        <p>DashForge is a responsive admin dashboard built with HTML, CSS, and JavaScript that visualizes sales data, manages orders, and tracks recent updates and customer activity.</p>
-                        <a href="https://dashboardaniket.netlify.app/" class="project_btn">Live Demo</a>
-                    </div>
-                </article>
-
-
-                <article class="project_card">
-                    <img src="Workout.png" alt="Project">
-
-                    <div class="project_overlay">
-                        <h3>AI Workout Generator - By Vercel</h3>
-                        <p>FitGen is an AI-powered fitness coach that generates personalized workout plans based on your specific goals, available time, equipment, and fitness level.</p>
-                        <a href="https://ai-workoutgenerator.vercel.app/" class="project_btn">Live Demo</a>
-                    </div>
-                </article>
-
-                <article class="project_card">
-                    <img src="parser.jpeg" alt="Project">
-
-                    <div class="project_overlay">
-                        <h3>Resume Parser</h3>
-                        <p>This project is an **AI-powered resume parser** that allows users to upload their CVs and instantly extract details using drag-and-drop functionality.</p>
-                        <a href="https://github.com/The-Aniketlad/resume-parser" class="project_btn">Github Repo</a>
-                    </div>
-                </article>
-
+    <section class="services active" id="services">
+      <h2 class="heading">My <span>Services</span></h2>
+      <div class="services-container">
+        <div class="service-card" onclick="this.classList.toggle('flipped')">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <div class="card-details">
+                <i class="bx bx-code-alt"></i>
+                <p class="text-title">Web Development</p>
+                <p class="text-body">
+                  Building responsive websites with HTML, CSS, JavaScript & PHP.
+                </p>
+              </div>
+              <button
+                class="card-button"
+                onclick="
+                  event.stopPropagation();
+                  this.closest('.service-card').classList.add('flipped');
+                "
+              >
+                More info
+              </button>
             </div>
-            </section>
+            <div class="service-card-back">
+              <p class="back-text">
+                I have worked on various web development languages during my
+                MCA, including HTML, CSS, JavaScript, and PHP. I have developed
+                multiple academic projects involving both frontend and backend
+                development.
+              </p>
+              <button
+                class="card-button-back"
+                onclick="
+                  event.stopPropagation();
+                  this.closest('.service-card').classList.remove('flipped');
+                "
+              >
+                Go Back
+              </button>
+            </div>
+          </div>
+        </div>
 
+        <div class="service-card" onclick="this.classList.toggle('flipped')">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <div class="card-details">
+                <i class="bx bx-paint-roll"></i>
+                <p class="text-title">UI/UX Design</p>
+                <p class="text-body">
+                  Crafting intuitive user interfaces & seamless experiences.
+                </p>
+              </div>
+              <button
+                class="card-button"
+                onclick="
+                  event.stopPropagation();
+                  this.closest('.service-card').classList.add('flipped');
+                "
+              >
+                More info
+              </button>
+            </div>
+            <div class="service-card-back">
+              <p class="back-text">
+                As part of my web development projects, I focused on creating
+                user-friendly interfaces. I learned the basics of UI/UX design,
+                including layout design, user flow, and responsive design using
+                tools like Figma and Bootstrap.
+              </p>
+              <button
+                class="card-button-back"
+                onclick="
+                  event.stopPropagation();
+                  this.closest('.service-card').classList.remove('flipped');
+                "
+              >
+                Go Back
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <!--certifications-->
-        <section class="certification active" id="certification">
-            <h2 class="heading">My <span>Certifications</span></h2>
-            <div class="certification-container">
-                <div class="certification-box">
-                    <div class="certification-detail active">
-                        <p class="numb">01</p>
-                        <h3>Python Specalization Certification</h3>
-                        <p>I have specialized in Python programming through a course on Coursera, offered by the University of Michigan, where I gained hands-on experience in writing efficient and scalable code.</p>
-                        <div class="tech">
-                            <p>Web Scraping, Web Services, SQL, Data Collection</p>
-                        </div>
-                        <div class="live-drive">
-                            <a href="https://drive.google.com/file/d/1E4wxQj6IY6Pl9aOcBGny-m29KdObecxK/view?usp=drive_link"><i class='bx bx-link-external'></i><span>Drive Link</span></a>
-                        </div>
-                    </div>
+        <div class="service-card" onclick="this.classList.toggle('flipped')">
+          <div class="service-card-inner">
+            <div class="service-card-front">
+              <div class="card-details">
+                <i class="bx bx-slideshow"></i>
+                <p class="text-title">Programming</p>
+                <p class="text-body">
+                  Solving problems with Java, Python & building scalable apps.
+                </p>
+              </div>
+              <button
+                class="card-button"
+                onclick="
+                  event.stopPropagation();
+                  this.closest('.service-card').classList.add('flipped');
+                "
+              >
+                More info
+              </button>
+            </div>
+            <div class="service-card-back">
+              <p class="back-text">
+                I have strong programming skills in languages like Java and
+                Python, developed through academic assignments and coding
+                practice. I enjoy solving logical problems and building
+                console-based applications.
+              </p>
+              <button
+                class="card-button-back"
+                onclick="
+                  event.stopPropagation();
+                  this.closest('.service-card').classList.remove('flipped');
+                "
+              >
+                Go Back
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                    <div class="certification-detail">
-                        <p class="numb">02</p>
-                        <h3>Data Analyst Certification</h3>
-                        <p>I have specialized in Data Analysis through a course on Coursera organized by Google, where I gained practical skills in data cleaning, visualization, and interpreting data-driven insights.</p>
-                        <div class="tech">
-                            <p>Data Analysis, SQL, R Programing, Tableau, Power BI</p>
-                        </div>
-                        <div class="live-drive">
-                            <a href="https://drive.google.com/drive/folders/170CJPtATBsnZyswGYlZJXgbw_AvLyQPI?usp=drive_link"><i class='bx bx-link-external'></i><span>Drive Link</span></a>
-                        </div>
-                    </div>
+    <!--qualifications-->
+    <section class="resume active" id="resume">
+      <h2 class="heading">Why <span>Hire Me?</span></h2>
+
+      <!-- Pill Tabs -->
+      <div class="hire-tabs">
+        <button class="hire-tab active" data-tab="experience">
+          <i class="bx bx-briefcase"></i> Experience
+        </button>
+        <button class="hire-tab" data-tab="education">
+          <i class="bx bx-book"></i> Education
+        </button>
+        <button class="hire-tab" data-tab="skills">
+          <i class="bx bx-code-alt"></i> Skills
+        </button>
+        <button class="hire-tab" data-tab="about">
+          <i class="bx bx-user"></i> About Me
+        </button>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="hire-content">
+        <!-- Experience -->
+        <div class="hire-panel active" id="experience">
+          <div class="panel-card">
+            <div class="panel-card-accent"></div>
+            <div class="panel-card-body">
+              <p class="panel-year">Present</p>
+              <h3>Fresher</h3>
+              <p>
+                I am a motivated and enthusiastic individual, with a strong
+                interest in web development and programming. Through my academic
+                projects, I have gained hands-on experience with technologies
+                like HTML, CSS, JavaScript, Java, and MySQL. As a quick learner
+                with a positive attitude, I'm eager to apply my skills in a
+                professional environment, contribute to meaningful projects, and
+                grow as a software professional.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Education -->
+        <div class="hire-panel" id="education">
+          <div class="edu-timeline">
+            <div class="edu-timeline-item left">
+              <div class="edu-timeline-card">
+                <p class="panel-year">2020 - 2022</p>
+                <h3>Bachelor's in Computer Science</h3>
+                <p class="edu-uni">
+                  <i class="bx bxs-graduation"></i> University of Mumbai
+                </p>
+                <p class="edu-location">
+                  <i class="bx bxs-map"></i> Airoli, Navi Mumbai
+                </p>
+              </div>
+              <div class="edu-timeline-dot"></div>
+            </div>
+            <div class="edu-timeline-item right">
+              <div class="edu-timeline-dot"></div>
+              <div class="edu-timeline-card">
+                <p class="panel-year">2024 - Present</p>
+                <h3>Master's in Computer Applications</h3>
+                <p class="edu-uni">
+                  <i class="bx bxs-graduation"></i> University of Mumbai
+                </p>
+                <p class="edu-location">
+                  <i class="bx bxs-map"></i> Nerul, Navi Mumbai
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skills -->
+        <div class="hire-panel" id="skills">
+          <div class="honeycomb">
+            <div class="honeycomb-row">
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-html5"></i><span>HTML5</span>
                 </div>
-
-                <div class="certification-box">
-                    <!--images carousel-->
-                    <div class="certifications-carousel">
-                        <div class="img-slide">
-                            <div class="img-item">
-                                <img src="Python-certi.png">
-                            </div>
-                            <div class="img-item">
-                                <img src="Data-certi.png">
-                            </div>
-                        </div>
-
-                        <div class="navigation">
-                            <button class="arrow-left"><i class='bx bx-chevron-left'></i></button>
-                            <button class="arrow-right"><i class='bx bx-chevron-right'></i></button>
-                        </div>
-                    </div>
+              </div>
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-css3"></i><span>CSS3</span>
+                </div>
+              </div>
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-javascript"></i><span>JavaScript</span>
+                </div>
+              </div>
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-python"></i><span>Python</span>
+                </div>
+              </div>
             </div>
-        </section>
-        
-        
+            <div class="honeycomb-row honeycomb-row-offset">
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-figma"></i><span>Figma</span>
+                </div>
+              </div>
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-nodejs"></i><span>Node.js</span>
+                </div>
+              </div>
+              <div class="hex">
+                <div class="hex-inner">
+                  <i class="bx bxl-tailwind-css"></i><span>Tailwind</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About Me -->
+        <div class="hire-panel" id="about">
+          <div class="about-grid">
+            <div class="about-item">
+              <p class="about-label">Name</p>
+              <p class="about-value">Aniket Lad</p>
+            </div>
+            <div class="about-item">
+              <p class="about-label">City</p>
+              <p class="about-value">Navi Mumbai</p>
+            </div>
+            <div class="about-item">
+              <p class="about-label">Nationality</p>
+              <p class="about-value">Indian</p>
+            </div>
+            <div class="about-item">
+              <p class="about-label">Email</p>
+              <p class="about-value">aniketlad28@gmail.com</p>
+            </div>
+            <div class="about-item">
+              <p class="about-label">Languages</p>
+              <p class="about-value">English, Marathi, Hindi</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!----Projects---->
+    <section class="projects section" id="projects">
+      <h2 class="heading">My <span>Projects</span></h2>
+      <p class="projects-desc">
+        Here are some of my recent works — built with passion, purpose, and
+        clean code.
+      </p>
+
+      <div class="spotlight-list">
+        <div class="spotlight-card">
+          <div class="spotlight-img">
+            <img src="Project-1.png" alt="Kuro Neko Anime App" />
+          </div>
+          <div class="spotlight-info">
+            <span class="spotlight-tag">UI/UX Design</span>
+            <h3>Kuro Neko — Anime Streaming App</h3>
+            <p>
+              A Figma design prototype for an anime streaming application named
+              "Kuro Neko" (Black Cat).
+            </p>
+            <div class="spotlight-tech">
+              <span>Figma</span>
+              <span>UI/UX</span>
+              <span>Prototyping</span>
+            </div>
+            <div class="spotlight-btns">
+              <a
+                href="https://www.figma.com/design/uzEJJOF1QzckAtWxq9Sblc/Kuro-neko--Anime-Streaming-app-?m=auto&t=SjNiK5Cpza0tAd5t-6"
+                class="explore-btn"
+                target="_blank"
+              >
+                View Design
+                <svg
+                  class="explore-arrow"
+                  viewBox="0 0 16 19"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight-card">
+          <div class="spotlight-img">
+            <img src="Project-2.jpeg" alt="DashForge Dashboard" />
+          </div>
+          <div class="spotlight-info">
+            <span class="spotlight-tag">Web Development</span>
+            <h3>DashForge — Admin Dashboard</h3>
+            <p>
+              A responsive admin dashboard built with HTML, CSS, and JavaScript
+              that visualizes sales data, manages orders, and tracks recent
+              updates and customer activity.
+            </p>
+            <div class="spotlight-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+            <div class="spotlight-btns">
+              <a
+                href="https://dashboardaniket.netlify.app/"
+                class="explore-btn"
+                target="_blank"
+              >
+                View Project
+                <svg
+                  class="explore-arrow"
+                  viewBox="0 0 16 19"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight-card">
+          <div class="spotlight-img">
+            <img src="Workout.png" alt="AI Workout Generator" />
+          </div>
+          <div class="spotlight-info">
+            <span class="spotlight-tag">AI / Full Stack</span>
+            <h3>FitGen — AI Workout Generator</h3>
+            <p>
+              An AI-powered fitness coach that generates personalized workout
+              plans based on your specific goals, available time, equipment, and
+              fitness level.
+            </p>
+            <div class="spotlight-tech">
+              <span>Next.js</span>
+              <span>AI</span>
+              <span>Vercel</span>
+            </div>
+            <div class="spotlight-btns">
+              <a
+                href="https://ai-workoutgenerator.vercel.app/"
+                class="explore-btn"
+                target="_blank"
+              >
+                View Project
+                <svg
+                  class="explore-arrow"
+                  viewBox="0 0 16 19"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="spotlight-card">
+          <div class="spotlight-img">
+            <img src="parser.jpeg" alt="Resume Parser" />
+          </div>
+          <div class="spotlight-info">
+            <span class="spotlight-tag">AI / Python</span>
+            <h3>Resume Parser — AI Powered</h3>
+            <p>
+              An AI-powered resume parser that allows users to upload their CVs
+              and instantly extract details using drag-and-drop functionality.
+            </p>
+            <div class="spotlight-tech">
+              <span>Python</span>
+              <span>AI</span>
+              <span>NLP</span>
+            </div>
+            <div class="spotlight-btns">
+              <a
+                href="https://github.com/The-Aniketlad/resume-parser"
+                class="explore-btn"
+                target="_blank"
+              >
+                View Github Repo
+                <svg
+                  class="explore-arrow"
+                  viewBox="0 0 16 19"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--certifications-->
+    <section class="certification active" id="certification">
+      <h2 class="heading">My <span>Certifications</span></h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <p class="cert-num">01</p>
+          <h3 class="cert-title">Python Specialization</h3>
+          <p class="cert-issuer">
+            <i class="bx bxs-graduation"></i> University of Michigan — Coursera
+          </p>
+          <p class="cert-desc">
+            Specialized in Python programming through Coursera, gaining hands-on
+            experience in writing efficient and scalable code.
+          </p>
+          <div class="cert-skills">
+            <span>Web Scraping</span>
+            <span>Web Services</span>
+            <span>SQL</span>
+            <span>Data Collection</span>
+          </div>
+          <a
+            href="https://drive.google.com/file/d/1E4wxQj6IY6Pl9aOcBGny-m29KdObecxK/view?usp=drive_link"
+            class="explore-btn"
+            target="_blank"
+          >
+            View Certificate
+            <svg
+              class="explore-arrow"
+              viewBox="0 0 16 19"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="cert-card">
+          <p class="cert-num">02</p>
+          <h3 class="cert-title">Google Data Analytics</h3>
+          <p class="cert-issuer">
+            <i class="bx bxs-graduation"></i> Google — Coursera
+          </p>
+          <p class="cert-desc">
+            Specialized in Data Analysis through Coursera by Google, gaining
+            practical skills in data cleaning, visualization, and interpreting
+            data-driven insights.
+          </p>
+          <div class="cert-skills">
+            <span>Data Analysis</span>
+            <span>SQL</span>
+            <span>R Programming</span>
+            <span>Tableau</span>
+            <span>Power BI</span>
+          </div>
+          <a
+            href="https://drive.google.com/drive/folders/170CJPtATBsnZyswGYlZJXgbw_AvLyQPI?usp=drive_link"
+            class="explore-btn"
+            target="_blank"
+          >
+            View Certificate
+            <svg
+              class="explore-arrow"
+              viewBox="0 0 16 19"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <section class="contact" id="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
+      <h2 class="heading">Contact <span>Me</span></h2>
 
-        <form action="https://formspree.io/f/mzzggvvz" method="POST" accept-charset="UTF-8">
-            <div class="input-group">
-                <div class="input-box">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                    <input type="email" name="email" placeholder="Email" required 
-                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                     title="Enter a valid email address (e.g. yourname@example.com)">
-               </div>
-                <div class="input-box">
-                    <input type="tel" name="phone" placeholder="Phone Number" pattern="[0-9]{10}" maxlength="10" required oninvalid="this.setCustomValidity('Please enter a 10-digit phone number')" oninput="this.setCustomValidity('')">
-                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    <small id="subject-count" style="color: gray; font-size: 1.2rem;">Words: 0 / 90</small>
-                </div>
-            </div>
+      <form
+        action="https://formspree.io/f/mzzggvvz"
+        method="POST"
+        accept-charset="UTF-8"
+      >
+        <div class="input-group">
+          <div class="input-box">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Enter a valid email address (e.g. yourname@example.com)"
+            />
+          </div>
+          <div class="input-box">
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              required
+              oninvalid="
+                this.setCustomValidity('Please enter a 10-digit phone number')
+              "
+              oninput="this.setCustomValidity('')"
+            />
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="Subject"
+              required
+            />
+            <small id="subject-count" style="color: gray; font-size: 1.2rem"
+              >Words: 0 / 90</small
+            >
+          </div>
+        </div>
 
-            <div class="input-group-2">
-                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-                <input type="submit" value="Send Message" class="btn">
-            </div>
-        </form>
+        <div class="input-group-2">
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit" class="contact-btn">
+            <span>Send Message</span>
+          </button>
+        </div>
+      </form>
     </section>
 
     <footer class="footer">
-        <div class="social">
-            <a href="https://www.linkedin.com/in/aniket-lad28a/"><i class='bx bxl-linkedin-square' style='color: #00ff51;'></i></a>
-            <a href="https://github.com/Lad2828"><i class='bx bxl-github' style='color:#00ff51' ></i></a>
-            <a href="https://www.instagram.com/aniket__lad_/"><i class='bx bxl-instagram-alt' style='color:#00ff51' ></i></a>
-        </div>
+      <div class="card footer-social">
+        <a
+          class="socialContainer containerOne"
+          href="https://www.instagram.com/aniket__lad_/"
+        >
+          <svg viewBox="0 0 16 16" class="socialSvg instagramSvg">
+            <path
+              d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="socialContainer containerTwo"
+          href="https://www.linkedin.com/in/aniket-lad28a/"
+        >
+          <svg viewBox="0 0 448 512" class="socialSvg linkdinSvg">
+            <path
+              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="socialContainer containerThree"
+          href="https://github.com/The-Aniketlad"
+        >
+          <svg viewBox="0 0 16 16" class="socialSvg githubSvg">
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"
+            ></path>
+          </svg>
+        </a>
+      </div>
 
-        <ul class="list">
-            <li>
-                <a href="#">FAQ</a>
-            </li>
+      <ul class="list">
+        <li>
+          <a href="#">FAQ</a>
+        </li>
 
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
+        <li>
+          <a href="#skills">Skills</a>
+        </li>
 
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
 
-            <li>
-                <a href="#resume">About Me</a>
-            </li>
-        </ul>
-        <p class="copyright">
-            © Aniket Lad | All Rights Reserved
-        </p>
+        <li>
+          <a href="#resume">About Me</a>
+        </li>
+      </ul>
+      <p class="copyright">© Aniket Lad | All Rights Reserved</p>
     </footer>
 
     <script src="./script.js?v=1.0"></script>
-     <script>
-        const subjectInput = document.getElementById('subject');
-        const subjectCount = document.getElementById('subject-count');
+    <script>
+      const subjectInput = document.getElementById("subject");
+      const subjectCount = document.getElementById("subject-count");
 
-        subjectInput.addEventListener('input', () => {
-            let words = subjectInput.value.trim().split(/\s+/);
+      subjectInput.addEventListener("input", () => {
+        let words = subjectInput.value.trim().split(/\s+/);
 
-            if (words.length === 1 && words[0] === "") words = [];
+        if (words.length === 1 && words[0] === "") words = [];
 
-            if (words.length > 90) {
-                subjectInput.value = words.slice(0, 90).join(" ");
-                words = words.slice(0, 90);
-                alert("Only 90 words are allowed in the Subject.");
-            }
+        if (words.length > 90) {
+          subjectInput.value = words.slice(0, 90).join(" ");
+          words = words.slice(0, 90);
+          alert("Only 90 words are allowed in the Subject.");
+        }
 
-            subjectCount.textContent = `Words: ${words.length} / 90`;
-        });
+        subjectCount.textContent = `Words: ${words.length} / 90`;
+      });
     </script>
 
     <script>
-        let timeout;
-        const header = document.querySelector('.header');
+      let timeout;
+      const header = document.querySelector(".header");
 
-        function showNavbar() {
-            header.classList.remove('hidden');
-         clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                header.classList.add('hidden');
-            }, 3000); 
-        }
+      function showNavbar() {
+        header.classList.remove("hidden");
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+          header.classList.add("hidden");
+        }, 3000);
+      }
 
-        document.addEventListener('mousemove', showNavbar);
-        document.addEventListener('keydown', showNavbar);
+      document.addEventListener("mousemove", showNavbar);
+      document.addEventListener("keydown", showNavbar);
 
-        document.addEventListener('touchstart', showNavbar);
+      document.addEventListener("touchstart", showNavbar);
 
-        showNavbar();
+      showNavbar();
     </script>
-    
 
     <button class="button" id="backToTop">
-        <svg class="svgIcon" viewBox="0 0 24 24">
-            <path d="M4 12l1.41 1.41L11 7.83v12.34h2V7.83l5.59 5.58L20 12l-8-8-8 8z"/>
-        </svg>
+      <svg class="svgIcon" viewBox="0 0 24 24">
+        <path
+          d="M4 12l1.41 1.41L11 7.83v12.34h2V7.83l5.59 5.58L20 12l-8-8-8 8z"
+        />
+      </svg>
     </button>
 
     <script>
-    const backToTopButton = document.getElementById('backToTop');
+      const backToTopButton = document.getElementById("backToTop");
 
-    window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         if (window.scrollY > 300) {
-            backToTopButton.style.display = 'flex';
+          backToTopButton.style.display = "flex";
         } else {
-            backToTopButton.style.display = 'none';
+          backToTopButton.style.display = "none";
         }
-    });
+      });
 
-    backToTopButton.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-</script>
+      backToTopButton.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
 
-<script>
-  const tabs = document.querySelectorAll(".tab");
-  const cards = Array.from(document.querySelectorAll(".project_card"));
-  const CARDS_PER_TAB = 6;
-  let currentTab = 0;
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const cards = Array.from(document.querySelectorAll(".project_card"));
+      const CARDS_PER_TAB = 6;
+      let currentTab = 0;
 
-  function showTab(tabIndex) {
-    const direction = tabIndex > currentTab ? "right" : "left";
+      function showTab(tabIndex) {
+        const direction = tabIndex > currentTab ? "right" : "left";
 
-    cards.forEach((card, index) => {
-      const start = tabIndex * CARDS_PER_TAB;
-      const end = start + CARDS_PER_TAB;
+        cards.forEach((card, index) => {
+          const start = tabIndex * CARDS_PER_TAB;
+          const end = start + CARDS_PER_TAB;
 
-      card.classList.remove("slide-in-left", "slide-in-right");
+          card.classList.remove("slide-in-left", "slide-in-right");
 
-      if (index >= start && index < end) {
-        card.style.display = "block";
+          if (index >= start && index < end) {
+            card.style.display = "block";
 
-        
-        void card.offsetWidth;
+            void card.offsetWidth;
 
-        card.classList.add(
-          direction === "right" ? "slide-in-right" : "slide-in-left"
-        );
-      } else {
-        card.style.display = "none";
+            card.classList.add(
+              direction === "right" ? "slide-in-right" : "slide-in-left",
+            );
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        currentTab = tabIndex;
       }
-    });
 
-    currentTab = tabIndex;
-  }
+      tabs.forEach((tab, index) => {
+        tab.addEventListener("click", () => {
+          if (index === currentTab) return;
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      if (index === currentTab) return;
+          tabs.forEach((t) => t.classList.remove("active"));
+          tab.classList.add("active");
 
-      tabs.forEach(t => t.classList.remove("active"));
-      tab.classList.add("active");
+          showTab(index);
+        });
+      });
 
-      showTab(index);
-    });
-  });
-
-  
-  showTab(0);
-</script>
-
-
-
-
-</body>
+      showTab(0);
+    </script>
+  </body>
 </html>
-
-
-
