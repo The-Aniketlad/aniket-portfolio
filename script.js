@@ -121,4 +121,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (certificationDetails.length)
     certificationDetails[0].classList.add("active");
+
+  // Contact Form Toggle Logic
+  const messageBtn = document.getElementById("message-btn");
+  const contactFormContainer = document.getElementById("contact-form-container");
+
+  if (messageBtn && contactFormContainer) {
+    messageBtn.addEventListener("click", () => {
+      contactFormContainer.classList.toggle("active");
+      
+      // Smooth scroll to the form when it becomes active
+      if (contactFormContainer.classList.contains("active")) {
+        setTimeout(() => {
+          contactFormContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }, 100);
+      }
+    });
+  }
 });

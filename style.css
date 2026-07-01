@@ -2038,13 +2038,49 @@ span {
   }
 }
 @media (max-width: 768px) {
+  .certification {
+    padding-bottom: 0rem !important;
+  }
+
   .contact {
     text-align: center;
+    padding: 2rem 3% 3rem !important;
   }
 
   .contact h2 {
     font-size: 2.5rem;
     text-align: center;
+    margin: 2rem 0 !important;
+  }
+
+  .contact-buttons {
+    gap: 1.5rem !important;
+    margin: 3rem auto 3rem !important;
+  }
+
+  .contact-buttons .social-btn {
+    height: 60px !important;
+    width: 60px !important;
+    border-radius: 1.4rem !important;
+  }
+
+  .contact-buttons .social-btn i {
+    font-size: 2.6rem !important;
+    min-width: 26px !important;
+  }
+
+  .contact-buttons .social-btn span {
+    font-size: 1.6rem !important;
+  }
+
+  .contact-buttons .social-btn:hover {
+    width: 160px !important;
+    border-radius: 1.2rem !important;
+  }
+
+  .contact-buttons .social-btn:hover span {
+    width: 80px !important;
+    margin-left: 1rem !important;
   }
 
   .contact form .input-box {
@@ -2104,4 +2140,133 @@ span {
   .resume-box p.desc {
     text-align: center;
   }
+}/* ===== Contact Buttons CSS ===== */
+.contact {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 10rem 9% 5rem !important;
 }
+
+.contact-buttons {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 2rem !important;
+  margin: 7rem auto 5rem !important;
+  width: 100% !important;
+  max-width: 900px !important;
+}
+
+.contact-buttons .social-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer;
+  height: 70px;
+  width: 70px;
+  color: #fff;
+  border-radius: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-buttons .social-btn i {
+  font-size: 3.2rem;
+  transition: all 0.3s ease;
+  min-width: 32px;
+  text-align: center;
+}
+
+.contact-buttons .social-btn span {
+  width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+  font-family: inherit;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-left: 0;
+}
+
+.contact-buttons .social-btn:hover {
+  width: 200px;
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-buttons .social-btn:hover span {
+  width: 110px;
+  opacity: 1;
+  margin-left: 1.2rem;
+}
+
+/* Individual Button Custom Hover Styles */
+#message-btn i {
+  color: var(--main-color);
+}
+#message-btn:hover {
+  border-color: var(--main-color);
+  box-shadow: 0 0 20px rgba(29, 185, 84, 0.3);
+}
+#message-btn span {
+  color: var(--main-color);
+}
+
+#gmail-btn i {
+  color: #ea4335;
+}
+#gmail-btn:hover {
+  border-color: #ea4335;
+  box-shadow: 0 0 20px rgba(234, 67, 53, 0.3);
+}
+#gmail-btn span {
+  color: #ea4335;
+}
+
+#linkedin-btn i {
+  color: #0e76a8;
+}
+#linkedin-btn:hover {
+  border-color: #0e76a8;
+  box-shadow: 0 0 20px rgba(14, 118, 168, 0.3);
+}
+#linkedin-btn span {
+  color: #0e76a8;
+}
+
+#github-btn i {
+  color: #fff;
+}
+#github-btn:hover {
+  border-color: #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+#github-btn span {
+  color: #fff;
+}
+
+/* Toggleable Form Container */
+.contact-form-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease, visibility 0.5s ease;
+  width: 100%;
+}
+
+.contact-form-container.active {
+  max-height: 1000px;
+  opacity: 1;
+  visibility: visible;
+}
+
