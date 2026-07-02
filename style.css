@@ -330,23 +330,35 @@ body {
   }
 
   .pill-nav-item {
-    padding: 1rem 1.2rem;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
   }
 
   .pill-nav-item i {
     font-size: 2rem;
+  }
+
+  .pill-nav-item.active {
+    transform: scale(1.18) !important;
+    box-shadow: 0 0 15px rgba(29, 185, 84, 0.45) !important;
   }
 }
 
 @media (max-width: 480px) {
   .pill-navbar {
     bottom: 1rem;
-    gap: 0.1rem;
+    gap: 0.15rem;
     padding: 0.5rem 0.6rem;
   }
 
   .pill-nav-item {
-    padding: 0.9rem 1rem;
+    width: 42px !important;
+    height: 42px !important;
   }
 
   .pill-nav-item i {
