@@ -6,7 +6,11 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Trebuchet MS", sans-serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .logo, .heading {
+  font-family: "Outfit", sans-serif;
 }
 
 :root {
@@ -379,10 +383,11 @@ span {
   font-size: 3.5rem;
 }
 .home-content h1 {
-  font-size: 6rem;
-  font-weight: 700;
+  font-size: 5.6rem;
+  font-weight: 800;
   margin-top: 1rem;
   line-height: 1.2;
+  letter-spacing: -1px;
 }
 .simple-hero {
   position: relative;
@@ -491,7 +496,11 @@ span {
 }
 
 .home-content p {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
   flex: 1;
   text-align: left;
   max-width: 80%;
