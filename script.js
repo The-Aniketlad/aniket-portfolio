@@ -140,10 +140,58 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+// Typing Animation Logic
+const startTypingAnimation = () => {
+  const staticSpan = document.querySelector(".typing-static");
+  const accentSpan = document.querySelector(".typing-accent");
+  const cursor = document.querySelector(".typing-cursor");
+
+  if (!staticSpan || !accentSpan) return;
+
+  const staticText = "Hi, It's me ";
+  const accentText = "Aniket";
+  
+  let staticIndex = 0;
+  let accentIndex = 0;
+  const typingSpeed = 100; // ms per character
+
+  function typeStatic() {
+    if (staticIndex < staticText.length) {
+      staticSpan.textContent += staticText.charAt(staticIndex);
+      staticIndex++;
+      setTimeout(typeStatic, typingSpeed);
+    } else {
+      setTimeout(typeAccent, 200);
+    }
+  }
+
+  function typeAccent() {
+    if (accentIndex < accentText.length) {
+      accentSpan.textContent += accentText.charAt(accentIndex);
+      accentIndex++;
+      setTimeout(typeAccent, typingSpeed + 50); // slightly slower for emphasis
+    } else {
+      // Keep cursor blinking for a while, then optionally fade it out
+      setTimeout(() => {
+        if (cursor) {
+          cursor.style.animation = "none";
+          cursor.style.opacity = "0";
+        }
+      }, 3000);
+    }
+  }
+
+  // Start typing
+  typeStatic();
+};
+
 // Preloader Fade Out on Complete Page Load
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   if (preloader) {
     preloader.classList.add("fade-out");
   }
+  // Start typing animation after preloader starts to fade out
+  setTimeout(startTypingAnimation, 600);
 });
+

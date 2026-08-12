@@ -2314,3 +2314,35 @@ span {
   100% { transform: rotate(-360deg); }
 }
 
+/* ===== Typing Animation styles ===== */
+.typing-title {
+  display: inline-flex;
+  align-items: center;
+  min-height: 6.8rem;
+  white-space: pre-wrap;
+}
+
+.typing-accent {
+  color: var(--main-color);
+}
+
+.typing-cursor {
+  font-weight: 300;
+  color: var(--main-color);
+  animation: cursor-blink 0.8s steps(2, start) infinite;
+  margin-left: 5px;
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+
