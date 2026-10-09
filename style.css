@@ -2345,4 +2345,239 @@ span {
   }
 }
 
+/* ===== Project Pagination Radio Tabs (Uiverse Style with Spotify Green Dark Glass Theme) ===== */
+.project-radio-group {
+  display: flex;
+  gap: 0;
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 4px;
+  border-radius: 50px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(29, 185, 84, 0.1);
+  border: 1px solid rgba(29, 185, 84, 0.25);
+  position: relative;
+  width: 260px;
+  height: 44px;
+  margin: 0 auto 5rem auto;
+  z-index: 10;
+  transition: width 0.3s ease;
+}
+
+.project-slider {
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  background: linear-gradient(135deg, #1db954, #1aa34a);
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  box-shadow:
+    0 3px 12px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(29, 185, 84, 0.45);
+  z-index: 0;
+}
+
+.project-radio-option {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+
+.project-radio-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+}
+
+.project-radio-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 16px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  border-radius: 50px;
+  position: relative;
+  white-space: nowrap;
+}
+
+.project-radio-option input[type="radio"]:checked + .project-radio-label {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.project-radio-label:hover {
+  color: #ffffff;
+}
+
+/* 2 Tabs CSS Support */
+.project-radio-group[data-tabs="2"] {
+  width: 240px;
+}
+.project-radio-group[data-tabs="2"] .project-slider {
+  width: calc(50% - 4px);
+}
+.project-radio-group[data-tabs="2"]:has(#proj-tab1:checked) .project-slider {
+  left: 4px;
+}
+.project-radio-group[data-tabs="2"]:has(#proj-tab2:checked) .project-slider {
+  left: calc(50% + 0px);
+}
+
+/* 3 Tabs CSS Support */
+.project-radio-group[data-tabs="3"] {
+  width: 320px;
+}
+.project-radio-group[data-tabs="3"] .project-slider {
+  width: calc(33.333% - 2.67px);
+}
+.project-radio-group[data-tabs="3"]:has(#proj-tab1:checked) .project-slider {
+  left: 4px;
+}
+.project-radio-group[data-tabs="3"]:has(#proj-tab2:checked) .project-slider {
+  left: calc(33.333% + 1.33px);
+}
+.project-radio-group[data-tabs="3"]:has(#proj-tab3:checked) .project-slider {
+  left: calc(66.666% - 1.33px);
+}
+
+/* Tab Panels */
+.projects-tab-panel {
+  display: none;
+}
+
+.projects-tab-panel.active {
+  display: block;
+  animation: projectFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Coming Soon Card with Uiverse Blur Wave Loader ===== */
+.coming-soon-card {
+  min-height: 48rem;
+  background: #0f0f10 !important;
+  border: 1px solid #232326 !important;
+  border-left: 4px solid var(--main-color) !important;
+  border-radius: 1.4rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 3rem 2rem !important;
+  cursor: default;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-soon-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(29, 185, 84, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.coming-soon-card:hover {
+  border-color: var(--main-color) !important;
+  box-shadow: 0 0 30px rgba(29, 185, 84, 0.16) !important;
+  transform: translateY(-4px);
+}
+
+.coming-soon-card .loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.coming-soon-card .loader span {
+  font-size: 2.2rem;
+  font-family: 'Outfit', 'Plus Jakarta Sans', monospace;
+  font-weight: 700;
+  color: #ffffff;
+  animation: blur-wave 3s linear infinite;
+  line-height: 1;
+  transition: all 0.5s;
+  letter-spacing: 0.18em;
+  display: inline-block;
+  user-select: none;
+}
+
+.coming-soon-card .loader span.space {
+  width: 1.2rem;
+}
+
+/* Stagger animation delays for continuous wave blur */
+.coming-soon-card .loader span:nth-child(1) { animation-delay: 0s; }
+.coming-soon-card .loader span:nth-child(2) { animation-delay: 0.15s; }
+.coming-soon-card .loader span:nth-child(3) { animation-delay: 0.3s; }
+.coming-soon-card .loader span:nth-child(4) { animation-delay: 0.45s; }
+.coming-soon-card .loader span:nth-child(5) { animation-delay: 0.6s; }
+.coming-soon-card .loader span:nth-child(6) { animation-delay: 0.75s; }
+.coming-soon-card .loader span:nth-child(7) { animation-delay: 0.9s; }
+.coming-soon-card .loader span:nth-child(8) { animation-delay: 1.05s; }
+.coming-soon-card .loader span:nth-child(9) { animation-delay: 1.2s; }
+.coming-soon-card .loader span:nth-child(10) { animation-delay: 1.35s; }
+.coming-soon-card .loader span:nth-child(11) { animation-delay: 1.5s; }
+.coming-soon-card .loader span:nth-child(12) { animation-delay: 1.65s; }
+
+@keyframes blur-wave {
+  0%, 90% {
+    filter: blur(0);
+    opacity: 1;
+    color: #ffffff;
+  }
+  50% {
+    filter: blur(8px);
+    opacity: 0.35;
+    color: var(--main-color);
+  }
+}
+
+@media (max-width: 768px) {
+  .project-radio-group[data-tabs="2"] {
+    width: 220px;
+    height: 40px;
+    margin-bottom: 3.5rem;
+  }
+  .project-radio-group[data-tabs="3"] {
+    width: 280px;
+    height: 40px;
+    margin-bottom: 3.5rem;
+  }
+  .project-radio-label {
+    font-size: 1.3rem;
+    padding: 0 10px;
+  }
+  .coming-soon-card {
+    min-height: 25rem;
+  }
+  .coming-soon-card .loader span {
+    font-size: 1.8rem;
+    letter-spacing: 0.12em;
+  }
+}
+
+
+
 

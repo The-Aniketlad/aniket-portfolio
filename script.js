@@ -138,6 +138,64 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // Dynamic & Automated Project Tabs Logic
+  const initProjectTabs = () => {
+    const radioGroup = document.querySelector('.project-radio-group');
+    const panels = document.querySelectorAll('.projects-tab-panel');
+
+    if (!radioGroup || !panels.length) return;
+
+    const totalPanels = panels.length;
+    radioGroup.setAttribute('data-tabs', totalPanels);
+
+    // Sync radio inputs if tab count changes dynamically
+    const currentRadios = radioGroup.querySelectorAll('.project-radio-option');
+    if (currentRadios.length !== totalPanels) {
+      radioGroup.innerHTML = '<div class="project-slider"></div>';
+      panels.forEach((panel, idx) => {
+        const tabNum = idx + 1;
+        const opt = document.createElement('div');
+        opt.className = 'project-radio-option';
+        opt.innerHTML = `
+          <input type="radio" name="project-tab" id="proj-tab${tabNum}" data-target="${panel.id}" ${idx === 0 ? 'checked=""' : ''} />
+          <label for="proj-tab${tabNum}" class="project-radio-label">Tab ${tabNum}</label>
+        `;
+        radioGroup.appendChild(opt);
+      });
+    }
+
+    const radioInputs = radioGroup.querySelectorAll('input[name="project-tab"]');
+    const updateSliderPos = (index) => {
+      const activeSlider = radioGroup.querySelector('.project-slider');
+      if (activeSlider && totalPanels > 0) {
+        const widthPercent = 100 / totalPanels;
+        activeSlider.style.width = `calc(${widthPercent}% - 4px)`;
+        activeSlider.style.left = `calc(${index * widthPercent}% + 2px)`;
+      }
+    };
+
+    radioInputs.forEach((input, index) => {
+      input.addEventListener('change', () => {
+        const targetId = input.getAttribute('data-target');
+        panels.forEach((panel) => panel.classList.remove('active'));
+        const targetPanel = document.getElementById(targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+        updateSliderPos(index);
+      });
+    });
+
+    // Initial slider alignment
+    const checkedInput = radioGroup.querySelector('input[name="project-tab"]:checked');
+    if (checkedInput) {
+      const idx = Array.from(radioInputs).indexOf(checkedInput);
+      if (idx !== -1) updateSliderPos(idx);
+    }
+  };
+
+  initProjectTabs();
 });
 
 // Typing Animation Logic
